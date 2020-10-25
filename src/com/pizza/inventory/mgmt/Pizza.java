@@ -13,7 +13,7 @@ abstract public class Pizza {
 	}
 
 	public void prepare() {
-		System.out.println("Preparing " + name);
+		System.out.println("\nPreparing " + name);
 	}
 
 	public void bake() {
@@ -31,12 +31,13 @@ abstract public class Pizza {
 	public String toString() {
 		// code to display pizza name and ingredients
 		StringBuffer display = new StringBuffer();
-		display.append("---- " + name + " ----\n");
+		display.append("-----" + name + " Ready-------\n");
 		display.append(dough + "\n");
 		display.append(sauce + "\n");
 		for (int i = 0; i < toppings.size(); i++) {
 			display.append((String) toppings.get(i) + "\n");
 		}
+		display.append("-------------------------------\n");
 		return display.toString();
 	}
 }
